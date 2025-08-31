@@ -29,7 +29,7 @@
         .btn:hover{background:#1a2230}
 
         .wrap{max-width:1600px;margin:18px auto;padding:0 24px}
-        .box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}
+        .box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:32px}
         h1{text-align:center;font-size:25px;font-weight:800;margin:6px 0}
         .flag{text-align:center;font-size:27px;margin:6px 0 14px}
         .chips{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
@@ -42,10 +42,6 @@
         @media (max-width:820px){  .grid{grid-template-columns:repeat(3, minmax(0,1fr))} }
         @media (max-width:650px){  .grid{grid-template-columns:repeat(2, minmax(0,1fr))} }
         @media (max-width:420px){  .grid{grid-template-columns:1fr} }
-
-        .pos-1{order:1}.pos-2{order:2}.pos-3{order:3}
-        .pos-4{order:4}.pos-5{order:5}.pos-6{order:6}
-        .pos-7{order:7}.pos-8{order:8}.pos-9{order:9}
 
         .card{background:var(--surface);border:1px solid var(--line);
               border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;min-width:0}
@@ -72,6 +68,10 @@
         .kv{color:var(--muted);font-size:16px;padding:0 14px 8px}
         .kv strong{color:#fff}
         .bar{height:5px;width:100%}
+
+        .map-box{text-align:center;margin-top:24px}
+        .map-box h2{margin-bottom:10px;font-size:20px;font-weight:700}
+        .map-box img{width:100%;border:1px solid var(--line);border-radius:12px}
     </style>
 </head>
 <body>
@@ -164,6 +164,12 @@
                 <div class="kv">Oy Oranı: <strong>%0,14</strong></div>
                 <div class="bar" style="background:#bdc3c7"></div>
             </article>
+        </div>
+
+        <!-- Harita -->
+        <div class="map-box">
+            <h2>2018 Milletvekili Seçimi Haritası</h2>
+            <img src="../map/2018mv.svg" alt="2018 Milletvekili Seçimi Haritası">
         </div>
     </section>
 </div>
