@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>2018 Türkiye Cumhurbaşkanlığı Seçimi — Senaryo</title>
+  <meta name="color-scheme" content="dark">
+
+  <style>
+    /* Product Sans (yerel) */
+    @font-face{font-family:'Product Sans';src:url('../font/ProductSans-Regular.ttf') format('truetype');font-weight:400;font-style:normal}
+    @font-face{font-family:'Product Sans';src:url('../font/ProductSans-Medium.ttf')  format('truetype');font-weight:500;font-style:normal}
+    @font-face{font-family:'Product Sans';src:url('../font/ProductSans-Bold.ttf')    format('truetype');font-weight:700;font-style:normal}
+    @font-face{font-family:'Product Sans';src:url('../font/ProductSans-Black.ttf')   format('truetype');font-weight:900;font-style:normal}
+
+    :root{
+      --bg:#111317; --panel:#1b1f27; --surface:#141821; --line:#2a2f3a;
+      --text:#e7eaf0; --muted:#b7bfcc; --r:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 'Product Sans',system-ui,sans-serif}
+
+    /* Üst bar (sticky + blur) */
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(27,31,39,.72);
+            backdrop-filter:saturate(115%) blur(8px);border-bottom:1px solid var(--line)}
+    .container{max-width:1600px;margin:0 auto;padding:14px 24px;
+               display:flex;justify-content:space-between;align-items:center}
+    .brand{font-weight:700}
+    .btn{border:1px solid var(--line);background:#12151b;color:var(--text);
+         padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn:hover{background:#1a2230}
+
+    /* Sayfa gövdesi */
+    .wrap{max-width:1440px;margin:18px auto;padding:0 24px}
+    .box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}
+    h1{text-align:center;font-size:20px;font-weight:800;margin:6px 0}
+    .flag{text-align:center;font-size:22px;margin:6px 0 14px}
+    .chips{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+    .chip{background:#12151b;border:1px solid var(--line);border-radius:10px;
+          padding:6px 10px;color:var(--muted)}
+
+    /* GRID */
+    .grid{
+      display:grid;
+      gap:12px;
+      grid-template-columns:repeat(4, minmax(0,1fr));
+    }
+    @media (max-width:1200px){ .grid{ grid-template-columns:repeat(5, minmax(0,1fr)); } }
+    @media (max-width:1024px){ .grid{ grid-template-columns:repeat(4, minmax(0,1fr)); } }
+    @media (max-width:820px){  .grid{ grid-template-columns:repeat(3, minmax(0,1fr)); } }
+    @media (max-width:650px){  .grid{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
+    @media (max-width:420px){  .grid{ grid-template-columns:1fr; } }
+
+    /* order ile yerleşim */
+    .pos-1-1{order:1}.pos-1-2{order:2}.pos-1-3{order:3}
+    .pos-1-4{order:4}.pos-1-5{order:5}.pos-1-6{order:6}
+    .pos-2-1{order:7}.pos-2-2{order:8}.pos-2-3{order:9}
+    .pos-2-4{order:10}.pos-2-5{order:11}.pos-2-6{order:12}
+
+    /* Kart */
+    .card{background:var(--surface);border:1px solid var(--line);
+          border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;min-width:0}
+    .top{display:flex;gap:10px;align-items:center;padding:12px 12px 6px}
+
+    .photo{
+      --bg:#333; --letter:#ffffff;
+      width:60px;height:60px;flex:0 0 60px;border-radius:10px;
+      border:1px solid rgba(255,255,255,.12);
+      display:flex;align-items:center;justify-content:center;
+      background: var(--bg);
+      position:relative;
+    }
+    .photo::after{
+      content: attr(data-letter);
+      color: var(--letter);
+      font-weight:900;
+      font-size:30px;
+      line-height:1;
+      transform: translateY(1px);
+    }
+
+    .meta{display:flex;flex-direction:column;gap:2px;min-width:0}
+    .abbr{font-weight:900;font-size:15px}
+    .fullname{color:var(--muted);font-size:13px;line-height:1.25;overflow:hidden}
+
+    .kv{color:var(--muted);font-size:13px;padding:0 12px 8px}
+    .kv strong{color:#fff}
+    .bar{height:4px;width:100%}
+
+    .note{color:var(--muted);text-align:center;font-size:13px;margin-top:12px}
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <div class="container">
+    <div class="brand">🇹🇷 Cumhurbaşkanlığı Senaryosu</div>
+    <a class="btn" href="../index.html">← Ana ekran</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="box">
+    <h1>2018 Türkiye Cumhurbaşkanlığı Seçimi</h1>
+    <div class="flag">TR</div>
+
+    <div class="chips">
+      <div class="chip"><b>24 Haziran 2018</b></div>
+      <div class="chip">Katılım: <b>%90</b></div>
+    </div>
+
+    <div class="grid">
+      <!-- Kartlar -->
+      <!-- Erdoğan -->
+      <article class="card pos-1-1">
+        <div class="top">
+          <div class="photo" style="--bg:#f8991d; --letter:#101317;" data-letter="E"></div>
+          <div class="meta"><div class="abbr">R.T. ERDOĞAN</div><div class="fullname">Recep Tayyip Erdoğan</div></div>
+        </div>
+        <div class="kv">Oy Oranı: <strong>%48,22</strong></div>
+        <div class="bar" style="background:#f8991d"></div>
+      </article>
+
+      <!-- Abdullah Gül -->
+      <article class="card pos-1-2">
+        <div class="top">
+          <div class="photo" style="--bg:#27ae60; --letter:#09110d;" data-letter="G"></div>
+          <div class="meta"><div class="abbr">ABDULLAH GÜL</div><div class="fullname">Çatı Aday</div></div>
+        </div>
+        <div class="kv">Oy Oranı: <strong>%29,12</strong></div>
+        <div class="bar" style="background:#27ae60"></div>
+      </article>
+
+      <!-- Muharrem İnce -->
+      <article class="card pos-1-3">
+        <div class="top">
+          <div class="photo" style="--bg:#2980b9; --letter:#ffffff;" data-letter="İ"></div>
+          <div class="meta"><div class="abbr">MUHARREM İNCE</div><div class="fullname">Bağımsız</div></div>
+        </div>
+        <div class="kv">Oy Oranı: <strong>%12,36</strong></div>
+        <div class="bar" style="background:#2980b9"></div>
+      </article>
+
+      <!-- Selahattin Demirtaş -->
+      <article class="card pos-1-4">
+        <div class="top">
+          <div class="photo" style="--bg:#8e44ad; --letter:#ffffff;" data-letter="D"></div>
+          <div class="meta"><div class="abbr">SELAHATTİN DEMİRTAŞ</div><div class="fullname">HDP</div></div>
+        </div>
+        <div class="kv">Oy Oranı: <strong>%10,12</strong></div>
+        <div class="bar" style="background:#8e44ad"></div>
+      </article>
+
+      <!-- Doğu Perinçek -->
+      <article class="card pos-1-5">
+        <div class="top">
+          <div class="photo" style="--bg:#e74c3c; --letter:#1a0c0c;" data-letter="P"></div>
+          <div class="meta"><div class="abbr">DOĞU PERİNÇEK</div><div class="fullname">Vatan Partisi</div></div>
+        </div>
+        <div class="kv">Oy Oranı: <strong>%0,18</strong></div>
+        <div class="bar" style="background:#e74c3c"></div>
+      </article>
+    </div>
+
+    <p class="note">fill this blank</p>
+  </section>
+</div>
+</body>
+</html>
