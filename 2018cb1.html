@@ -21,7 +21,14 @@
   @media (max-width:640px){ .grid{grid-template-columns:1fr} }
   .card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#141821}
   .card .top{display:flex;gap:12px;padding:12px 12px 0 12px;align-items:center}
-  .card .photo{width:96px;height:96px;border-radius:8px;background:#0f1218;flex:0 0 auto;display:flex;align-items:center;justify-content:center;color:#4b5363;font-size:12px;border:1px solid var(--line)}
+  .photo{width:96px;height:96px;border-radius:8px;flex:0 0 auto;
+         display:flex;align-items:center;justify-content:center;
+         color:#fff;font-size:12px;border:1px solid var(--line)}
+  .photo.orange{background:var(--orange)}
+  .photo.green{background:var(--green)}
+  .photo.blue{background:var(--blue)}
+  .photo.purple{background:var(--purple)}
+  .photo.red{background:var(--red)}
   .card .name{font-weight:700;font-size:16px}
   .kv{padding:8px 12px 12px 12px;color:var(--muted)}
   .kv div{margin:3px 0}
@@ -50,7 +57,7 @@
       <!-- Erdoğan -->
       <div class="card">
         <div class="top">
-          <div class="photo">Fotoğraf</div>
+          <div class="photo orange">Fotoğraf</div>
           <div>
             <div class="name">Recep Tayyip Erdoğan</div>
             <div class="subtle">AK Parti</div>
@@ -67,10 +74,10 @@
       <!-- Abdullah Gül -->
       <div class="card">
         <div class="top">
-          <div class="photo">Fotoğraf</div>
+          <div class="photo green">Fotoğraf</div>
           <div>
             <div class="name">Abdullah Gül</div>
-            <div class="subtle">— (Çatı aday)</div>
+            <div class="subtle">Millet İttifakı</div>
           </div>
         </div>
         <div class="kv">
@@ -84,7 +91,7 @@
       <!-- Muharrem İnce -->
       <div class="card">
         <div class="top">
-          <div class="photo">Fotoğraf</div>
+          <div class="photo blue">Fotoğraf</div>
           <div>
             <div class="name">Muharrem İnce</div>
             <div class="subtle">Bağımsız</div>
@@ -101,7 +108,7 @@
       <!-- Selahattin Demirtaş -->
       <div class="card">
         <div class="top">
-          <div class="photo">Fotoğraf</div>
+          <div class="photo purple">Fotoğraf</div>
           <div>
             <div class="name">Selahattin Demirtaş</div>
             <div class="subtle">HDP</div>
@@ -118,7 +125,7 @@
       <!-- Doğu Perinçek -->
       <div class="card" style="grid-column:1/-1">
         <div class="top">
-          <div class="photo">Fotoğraf</div>
+          <div class="photo red">Fotoğraf</div>
           <div>
             <div class="name">Doğu Perinçek</div>
             <div class="subtle">Vatan Partisi</div>
