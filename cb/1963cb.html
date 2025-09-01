@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>1963 Türkiye Cumhurbaşkanlığı Seçimi — Senaryo</title>
+  <meta name="color-scheme" content="dark">
+  <style>
+    @font-face{font-family:'Product Sans';src:url('../font/ProductSans-Regular.ttf') format('truetype');font-weight:400;font-style:normal}
+    @font-face{font-family:'Product Sans';src:url('../font/ProductSans-Medium.ttf')  format('truetype');font-weight:500;font-style:normal}
+    @font-face{font-family:'Product Sans';src:url('../font/ProductSans-Bold.ttf')    format('truetype');font-weight:700;font-style:normal}
+    @font-face{font-family:'Product Sans';src:url('../font/ProductSans-Black.ttf')   format('truetype');font-weight:900;font-style:normal}
+
+    :root{
+      --bg:#111317; --panel:#1b1f27; --surface:#141821; --line:#2a2f3a;
+      --text:#e7eaf0; --muted:#b7bfcc; --r:14px;
+    }
+
+    body{margin:0;background:var(--bg);color:var(--text);
+         font:19px/1.5 'Product Sans',system-ui,sans-serif}
+
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(27,31,39,.72);
+            backdrop-filter:saturate(115%) blur(8px);border-bottom:1px solid var(--line)}
+    .container{max-width:1600px;margin:0 auto;padding:14px 24px;
+               display:flex;justify-content:space-between;align-items:center}
+    .brand{font-weight:700}
+    .btn{border:1px solid var(--line);background:#12151b;color:var(--text);
+         padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn:hover{background:#1a2230}
+
+    .wrap{max-width:1552px;margin:18px auto;padding:0 24px}
+    .box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:32px}
+    h1{text-align:center;font-size:25px;font-weight:800;margin:6px 0}
+    .flag{text-align:center;font-size:27px;margin:6px 0 14px}
+    .chips{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+    .chip{background:#12151b;border:1px solid var(--line);border-radius:10px;
+          padding:6px 10px;color:var(--muted);font-size:16px}
+
+    .grid{display:grid;gap:12px;grid-template-columns:repeat(3, minmax(0,1fr))}
+    @media (max-width:1200px){ .grid{grid-template-columns:repeat(5, minmax(0,1fr))} }
+    @media (max-width:1024px){ .grid{grid-template-columns:repeat(4, minmax(0,1fr))} }
+    @media (max-width:820px){  .grid{grid-template-columns:repeat(3, minmax(0,1fr))} }
+    @media (max-width:650px){  .grid{grid-template-columns:repeat(2, minmax(0,1fr))} }
+    @media (max-width:420px){  .grid{grid-template-columns:1fr} }
+
+    .grid-2{display:grid;gap:20px;grid-template-columns:repeat(2, minmax(0,1fr));justify-content:center}
+
+    .card{background:var(--surface);border:1px solid var(--line);
+          border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;min-width:0}
+    .top{display:flex;gap:12px;align-items:center;padding:14px 14px 8px}
+
+    .photo{--bg:#333;--letter:#fff;width:80px;height:80px;flex:0 0 80px;border-radius:12px;
+           border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;
+           background:var(--bg);position:relative}
+    .photo::after{content:attr(data-letter);color:var(--letter);font-weight:900;font-size:36px;
+                  line-height:1;transform:translateY(1px)}
+
+    .meta{display:flex;flex-direction:column;gap:2px;min-width:0}
+    .abbr{font-weight:900;font-size:19px}
+    .fullname{color:var(--muted);font-size:16px;line-height:1.25;overflow:hidden}
+
+    .kv{color:var(--muted);font-size:16px;padding:0 14px 8px}
+    .kv strong{color:#fff}
+    .bar{height:5px;width:100%}
+
+    /* Haritalar */
+    .map-box{margin-top:24px;text-align:center}
+    .map-box h2{font-size:20px;font-weight:700;margin-bottom:12px}
+    .map-box img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <div class="container">
+    <div class="brand">🇹🇷 Cumhurbaşkanlığı Senaryosu</div>
+    <a class="btn" href="../index.html">← Ana ekran</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <!-- İlk tur -->
+  <section class="box">
+    <h1>1963 Türkiye Cumhurbaşkanlığı Seçimi • 1. Tur</h1>
+    <div class="flag">TR</div>
+    <div class="chips">
+      <div class="chip"><b>1963</b></div>
+      <div class="chip">Katılım: <b>%90.2</b></div>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="top">
+          <div class="photo" style="--bg:#5f2084;--letter:#ffffff" data-letter="M"></div>
+          <div class="meta"><div class="abbr">GÜMÜŞPALA</div><div class="fullname">Mehmet Ragıp Gümüşpala • DP</div></div>
+        </div>
+        <div class="kv">Oy Oranı: <strong>%47,8</strong></div>
+        <div class="bar" style="background:#5f2084"></div>
+      </article>
+
+      <article class="card">
+        <div class="top">
+          <div class="photo" style="--bg:#e30613;--letter:#FFFFFF" data-letter="G"></div>
+          <div class="meta"><div class="abbr">GÜLEK</div><div class="fullname">Kasım Gülek • CHP</div></div>
+        </div>
+        <div class="kv">Oy Oranı: <strong>%36,5</strong></div>
+        <div class="bar" style="background:#e30613"></div>
+      </article>
+
+      <article class="card">
+        <div class="top">
+          <div class="photo" style="--bg:#f4b821;--letter:#101317" data-letter="A"></div>
+          <div class="meta"><div class="abbr">ALİCAN</div><div class="fullname">Ekrem Alican • HÜRRİYET</div></div>
+        </div>
+        <div class="kv">Oy Oranı: <strong>%9,5</strong></div>
+        <div class="bar" style="background:#f4b821"></div>
+      </article>
+
+      <article class="card">
+        <div class="top">
+          <div class="photo" style="--bg:#aa053c;--letter:#FFFFFF" data-letter="B"></div>
+          <div class="meta"><div class="abbr">BÖLÜKBAŞI</div><div class="fullname">Osman Bölükbaşı • MP</div></div>
+        </div>
+        <div class="kv">Oy Oranı: <strong>%6,2</strong></div>
+        <div class="bar" style="background:#aa053c"></div>
+      </article>
+
+    </div>
+
+    <div class="map-box">
+      <h2>Seçim Haritası</h2>
+      <img src="../map/1963cb1.svg" alt="1963 Cumhurbaşkanlığı Haritası">
+    </div>
+  </section>
+
+  <section class="box">
+    <h1>1963 Türkiye Cumhurbaşkanlığı Seçimi • 2. Tur</h1>
+    <div class="flag">TR</div>
+
+    <div class="grid-2">
+      <article class="card">
+        <div class="top">
+          <div class="photo" style="--bg:#5f2084;--letter:#ffffff" data-letter="M"></div>
+          <div class="meta"><div class="abbr">GÜMÜŞPALA</div><div class="fullname">Mehmet Ragıp Gümüşpala • DP</div></div>
+        </div>
+        <div class="kv">Oy Oranı: <strong>%60,8</strong></div>
+        <div class="bar" style="background:#5f2084"></div>
+      </article>
+
+      <article class="card">
+        <div class="top">
+          <div class="photo" style="--bg:#e30613;--letter:#FFFFFF" data-letter="G"></div>
+          <div class="meta"><div class="abbr">GÜLEK</div><div class="fullname">Kasım Gülek • CHP</div></div>
+        </div>
+        <div class="kv">Oy Oranı: <strong>%39,2</strong></div>
+        <div class="bar" style="background:#e30613"></div>
+      </article>
+
+    </div>
+
+    <div class="map-box">
+      <h2>2. Tur Haritası</h2>
+      <img src="../map/1963cb2.svg" alt="1963 Cumhurbaşkanlığı 2. Tur Haritası">
+    </div>
+  </section>
+</div>
+</body>
+</html>
